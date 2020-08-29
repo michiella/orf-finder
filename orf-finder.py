@@ -30,7 +30,7 @@ def orf_it_up(genome):
     if (current_codon == start_codon):
       orf += "---->start of codon\n"
 
-      while not (current_codon in stop_codons):
+      while not (current_codon in stop_codons) and (current_codon in gencode):
         orf += current_codon
         aas += gencode[current_codon]
 
